@@ -1,7 +1,5 @@
 # Alyra Veilles Challenge
 
-La référence [veilles.mp4](https://wptemplates.pehaa.com/assets/alyra/veilles.mp4)
-
 Nous utilisons bootstrap 5 pour les styles de ce document.
 
 Nous utilisons également la bibliothèque JavaScript - Moment.js et son extension moment-with-locales
