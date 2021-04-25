@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veilles EthersJS</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header id="header" class="header text-center">
+        <h1 id="h1" class="p-5">Veilles EthersJS</h1>
+        <p id="entete" class="entete bg-primary text-light rounded p-4">
+          Bonjour ! Nous sommes le <span id="date-du-jour"> </span>&#128522</p>
+      </header>
+    </div>
+    <main class="container">
+      <div class="row row-cols-1 row-cols-sm-2">
+        <!-- CheckBox -->
+        <div id="div-checkbox" class="col mb-3">
+          <div class="input-group">
+            <div class="input-group-text">
+              <input
+                id="veilleschbox"
+                class="form-check-input"
+                checkbox="true"
+                type="checkbox"
+                value="on"
+                aria-label="Checkbox for following text input"
+              />
+            </div>
+            <label class="form-control"
+              >Afficher uniquement des veilles à venir</label
+            >
+          </div>
+        </div>
+
+        <!-- Trie -->
+        <div id="div-trie" class="col mb-3">
+          <div class="input-group">
+            <label class="input-group-text" for="inputSort">Trier</label>
+            <select onchange="selectAz(this)" class="form-select" id="inputSort">
+              <option value="trie-date" selected>par date</option>
+              <option value="trie-atoz">de A à Z</option>
+              <option value="trie-za">de Z à A</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Category -->
+        <div id="div-category" class="col mb-3">
+          <div class="input-group">
+            <label class="input-group-text" for="inputClassify"
+              >Catégories</label
+            >
+            <select class="form-select" id="inputClassify">
+              <option value="toutes les veilles" selected
+                >toutes les categories</option
+              >
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card Veilles-->
+      <div id="grid-container"></div>
+    </main>
+
+    
+    
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+    ></script>
+    <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+    <script src="js/veilles.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+
+
+<footer>
+  <p class="text-center bg-primary rounded p-2 text-light"> &copy; Développer avec &hearts; par Romane, Eddy, Franck, Ioannis, et Théo !</p>
+</footer>
+</html>
